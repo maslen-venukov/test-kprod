@@ -86,8 +86,8 @@
           bottom: 50%
           transform: rotate(135deg) translateY(-50%)
   &__nav
-    .nav__list
-      @media screen and ( max-width: 1200px )
+    @media screen and ( max-width: 1200px )
+      .nav__list
         position: fixed
         flex-direction: column
         top: 0
@@ -98,6 +98,7 @@
         background-color: #fff
         padding: 30px 20px
         box-shadow: 0 3px 15px rgba(#4c1dd2, .5)
+        overflow-y: auto
         transition: transform .2s
         &.active
           transform: translateX(-80vw)
