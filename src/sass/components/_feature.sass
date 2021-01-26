@@ -1,0 +1,71 @@
+.feature
+  background-color: #121b30
+  border-radius: 21px
+  padding: 24px
+  &--light
+    background-color: #fff
+    color: $dark
+  &--vertical
+    top: 44px
+    left: 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    width: 160px
+    .feature__icon
+      margin-bottom: 13px
+    .feature__text
+      max-width: 140px
+  &--horizontal
+    top: 300px
+    right: -165px
+    display: flex
+    align-items: center
+    padding: 15px 30px 15px 20px
+    .feature__icon
+      margin-right: 14px
+    .feature__text
+      max-width: 170px
+  &--graph
+    width: 320px
+    bottom: -95px
+    right: -70px
+    display: flex
+    flex-wrap: wrap
+    .feature__icon
+      margin-right: 18px
+    .feature__info
+      flex-basis: calc(100% - 52px - 18px)
+      margin-bottom: 35px
+    .feature__title
+      font-family: 'GothamPro', sans-serif
+      font-weight: 700
+      margin-bottom: 0
+  &__icon
+    display: block
+    width: 52px
+    height: 52px
+    background-color: #f6f4fc
+    border-radius: 50%
+    background-position: center
+    background-repeat: no-repeat
+    &--clients
+      background-image: url('../img/icons/clients.svg')
+      background-size: 24px 19px
+    &--sales
+      background-image: url('../img/icons/sales.svg')
+      background-size: 20px 21px
+    &--growth
+      background-image: url('../img/icons/growth.svg')
+      background-size: 20px 17px
+  &__title
+    font-size: 22px
+    font-weight: 400
+    margin-bottom: 8px
+  &__text
+    font-size: 12px
+    line-height: 1.5
+    font-weight: 300
+  &__graph
+    width: 100%

@@ -1,0 +1,59 @@
+.header
+  position: absolute
+  top: 50px
+  left: 0
+  z-index: 100
+  width: 100%
+  color: #fff
+  &__container
+    position: relative
+    display: flex
+    align-items: center
+    &::before
+      content: ''
+      position: absolute
+      bottom: -90px
+      left: -70px
+      width: 14px
+      height: 14px
+      background: url('../img/icons/plus.svg') center / cover no-repeat
+  &__logo
+    margin-right: 46px
+  &__phone
+    margin-left: auto
+    margin-right: 43px
+
+.logo
+  width: 49px
+  height: 34px
+
+.nav
+  font-size: 16px
+  &__list
+    display: flex
+  &__item
+    &:not(:last-child)
+      margin-right: 40px
+
+.phone
+  font-weight: 300
+
+.messenger
+  position: relative
+  display: inline-flex
+  align-items: center
+  height: 48px
+  background-color: #4f15f3
+  font-family: 'GothamPro', sans-serif
+  font-size: 17px
+  border-radius: 9px
+  padding: 0 24px 0 64px
+  &::before
+    content: ''
+    position: absolute
+    top: 50%
+    left: 24px
+    transform: translateY(-50%)
+    width: 23px
+    height: 23px
+    background: url('../img/icons/whatsapp.svg') center / cover no-repeat
