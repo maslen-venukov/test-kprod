@@ -2,6 +2,8 @@
   background-color: #121b30
   border-radius: 21px
   padding: 24px
+  @media screen and ( max-width: 1600px )
+    padding: 20px
   &--light
     background-color: #fff
     color: $dark
@@ -13,16 +15,38 @@
     align-items: center
     text-align: center
     width: 160px
+    @media screen and ( max-width: 1600px )
+      width: 140px
+    @media screen and ( max-width: 375px )
+      width: 100%
+      flex-direction: row
+      text-align: left
     .feature__icon
       margin-bottom: 13px
+      @media screen and ( max-width: 375px )
+        margin-bottom: 0
+        margin-right: 14px
     .feature__text
       max-width: 140px
+      @media screen and ( max-width: 375px )
+        max-width: 100%
   &--horizontal
     top: 300px
     right: -165px
     display: flex
     align-items: center
     padding: 15px 30px 15px 20px
+    @media screen and ( max-width: 1600px )
+      right: -150px
+    @media screen and ( max-width: 1600px )
+      top: 320px
+      right: -50px
+      padding: 15px 20px
+    @media screen and ( max-width: 1440px )
+      right: -30px
+    @media screen and ( max-width: 576px )
+      top: 52%
+      right: 0
     .feature__icon
       margin-right: 14px
     .feature__text
@@ -33,15 +57,26 @@
     right: -70px
     display: flex
     flex-wrap: wrap
+    @media screen and ( max-width: 1600px )
+      width: 240px
+      right: auto
+      left: 20px
+      bottom: 20px
+    @media screen and ( max-width: 576px )
+      width: 100%
     .feature__icon
       margin-right: 18px
     .feature__info
       flex-basis: calc(100% - 52px - 18px)
-      margin-bottom: 35px
+      display: flex
+      align-items: center
     .feature__title
       font-family: 'GothamPro', sans-serif
+      font-size: 18px
       font-weight: 700
       margin-bottom: 0
+      @media screen and ( max-width: 1600px )
+        font-size: 16px
   &__icon
     display: block
     width: 52px
@@ -50,6 +85,9 @@
     border-radius: 50%
     background-position: center
     background-repeat: no-repeat
+    @media screen and ( max-width: 1600px )
+      width: 44px
+      height: 44px
     &--clients
       background-image: url('../img/icons/clients.svg')
       background-size: 24px 19px
@@ -63,9 +101,16 @@
     font-size: 22px
     font-weight: 400
     margin-bottom: 8px
+    @media screen and ( max-width: 1600px )
+      font-size: 18px
   &__text
     font-size: 12px
     line-height: 1.5
     font-weight: 300
   &__graph
     width: 100%
+    margin-top: 35px
+    @media screen and ( max-width: 1600px )
+      margin-top: 
+    @media screen and ( max-width: 576px )
+      display: none

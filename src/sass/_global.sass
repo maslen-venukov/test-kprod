@@ -13,6 +13,14 @@ body
   max-width: 1325px
   padding: 0 15px
   margin: 0 auto
+  @media screen and ( max-width: 1440px )
+    max-width: 1200px
+  @media screen and ( max-width: 1200px )
+    max-width: 991px
+  @media screen and ( max-width: 991px )
+    max-width: 768px
+  @media screen and ( max-width: 768px )
+    max-width: 100%
 
 .btn,
 .input
@@ -20,16 +28,26 @@ body
   align-items: center
   height: 56px
   border-radius: 12px
+  @media screen and ( max-width: 576px )
+    height: 50px
 
 .btn
   background-color: $accent
   color: #fff
   padding: 0 54px
+  transition: box-shadow .2s
+  @media screen and ( max-width: 1440px )
+    padding: 0 34px
+  &:hover
+    box-shadow: 0 3px 15px rgba($accent, .5)
 
 .input
   padding: 0 19px
+  transition: box-shadow .2s
   &::placeholder
     color: #bcbcbc
+  &:focus
+    box-shadow: 0 3px 15px rgba(#fff, .5)
 
 .lines
   position: absolute

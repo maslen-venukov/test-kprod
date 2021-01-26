@@ -5,6 +5,10 @@
   z-index: 100
   width: 100%
   color: #fff
+  @media screen and ( max-height: 930px ) and ( min-width: 576px )
+    top: 30px
+  @media screen and ( max-width: 576px )
+    top: 25px
   &__container
     position: relative
     display: flex
@@ -19,21 +23,123 @@
       background: url('../img/icons/plus.svg') center / cover no-repeat
   &__logo
     margin-right: 46px
+    @media screen and ( max-width: 768px )
+      margin-right: 23px
+    @media screen and ( max-width: 576px )
+      margin-right: 0
   &__phone
     margin-left: auto
     margin-right: 43px
+    @media screen and ( max-width: 768px )
+      margin-right: 20px
+    @media screen and ( max-width: 576px )
+      margin-right: 0
+  &__messenger
+    @media screen and ( max-width: 1200px )
+      margin-right: 40px
+    @media screen and ( max-width: 768px )
+      margin-right: 20px
+    @media screen and ( max-width: 576px )
+      display: none
+  &__burger
+    display: none
+    @media screen and ( max-width: 1200px )
+      position: relative
+      z-index: 1001
+      display: block
+      width: 40px
+      height: 25px
+      span,
+      &::before,
+      &::after
+        content: ''
+        position: absolute
+        left: 0
+        width: 100%
+        height: 3px
+        background-color: #fff
+        transition: transform .2s, top .2s, bottom .2s, background-color .2s
+      span
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        transition: opacity .2s, visibility .2s
+      &::before
+        top: 0
+      &::after
+        bottom: 0
+      &.active
+        position: fixed
+        top: 40px
+        right: 15px
+        span,
+        &::before,
+        &::after
+          background-color: #4c1dd2
+        span
+          opacity: 0
+          visibility: hidden
+        &::before
+          top: 50%
+          transform: rotate(45deg) translateY(-50%)
+        &::after
+          bottom: 50%
+          transform: rotate(135deg) translateY(-50%)
+  &__nav
+    .nav__list
+      @media screen and ( max-width: 1200px )
+        position: fixed
+        flex-direction: column
+        top: 0
+        left: 100vw
+        width: 100vw
+        height: 100vh
+        z-index: 1000
+        background-color: #fff
+        padding: 30px 20px
+        box-shadow: 0 3px 15px rgba(#4c1dd2, .5)
+        transition: transform .2s
+        &.active
+          transform: translateX(-80vw)
+      .nav__item
+        font-size: 40px
+        color: #4c1dd2
+        &:not(:last-child)
+          margin: 0 0 20px
+      .nav__link
+        &::before
+          height: 4px
 
 .logo
   width: 49px
   height: 34px
+  transition: transform .4s
+  &:hover
+    transform: scale(1.1)
 
 .nav
   font-size: 16px
+  @media screen and ( max-width: 1200px )
+    order: 1
+    margin-left: auto
   &__list
     display: flex
   &__item
     &:not(:last-child)
       margin-right: 40px
+  &__link
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      bottom: -3px
+      left: 0
+      width: 0
+      height: 2px
+      background-color: currentColor
+      transition: width .2s
+    &:hover::before
+      width: 100%
 
 .phone
   font-weight: 300
@@ -48,6 +154,9 @@
   font-size: 17px
   border-radius: 9px
   padding: 0 24px 0 64px
+  transition: background-color .2s
+  &:hover
+    background-color: lighten(#4f15f3, 3%)
   &::before
     content: ''
     position: absolute
